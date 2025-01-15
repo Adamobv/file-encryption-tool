@@ -2,18 +2,19 @@
 
 
 
-def encrypt():
+def encrypt(filename,method):
+    with open(filename) as file:
+        
 
-
-def decrypt():
-
+def decrypt(filename):
+    pass
 
 
 def help_menu():
     print("h - Display this help menu")
     print("e - Encrypt a file")
     print("    Usage: encrypt <filepath> <method>")
-    print("    method: Encryption method (e.g., AES, DES, etc.)")
+    print("    method: Encryption method (currently this program offers: 'AES' or 'DES')")
     print()
     print("d - Decrypt an encrypted file")
     print("    Usage: decrypt <encrypted_filepath>")
