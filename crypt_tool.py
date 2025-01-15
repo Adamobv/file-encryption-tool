@@ -2,7 +2,10 @@
 
 
 
+def encrypt():
 
+
+def decrypt():
 
 
 
@@ -10,11 +13,10 @@ def help_menu():
     print("h - Display this help menu")
     print("e - Encrypt a file")
     print("    Usage: encrypt <filepath> <method>")
-    print("    filepath: Path to the file to encrypt (e.g., my_file.txt)")
     print("    method: Encryption method (e.g., AES, DES, etc.)")
+    print()
     print("d - Decrypt an encrypted file")
     print("    Usage: decrypt <encrypted_filepath>")
-    print("    encrypted_filepath: Path to the encrypted file (e.g., my_file.txt.enc)")
 
 
 
@@ -36,8 +38,12 @@ def main():
                 print("Usage: encrypt <filepath> <method>")
             else:
                 encrypt(inp[1], inp[2])
-           pass
         elif inp[0] == "d":
-            pass
+            if len(inp) < 3:
+                print("Usage: encrypt <filepath> <method>")
+            else:
+                decrypt(inp[1])
+        else:
+            print("Invalid command - type h for help menu")
 
 main()
